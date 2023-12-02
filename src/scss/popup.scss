@@ -1,0 +1,208 @@
+@import "variables";
+@import "reset";
+
+.popup {
+  position:fixed;
+  display:none;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background: $shading;
+  z-index: 10;
+  .overlay_popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    z-index: 999;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+  }
+
+  .popup__content {
+    position: relative;
+    z-index: 1000;
+    padding: 10px;
+    background-color: $shading;
+    display: none;
+    border: 1px solid $mainColor;
+    max-width: 450px;
+    .wrap-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+}
+
+
+.feedback__form {
+  h3 {
+    @include sub-title;
+    margin-bottom: 30px;
+  }
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    position: relative;
+    &:nth-of-type(1) {
+      svg {
+        position: absolute;
+        left: 9px;
+        top: -20px;
+        width: 25px;
+      }
+
+    }
+    &:nth-of-type(2) {
+      svg {
+        position: absolute;
+        left: 9px;
+        top: -8px;
+        width: 25px;
+      }
+    }
+    &:nth-of-type(3) {
+      position: relative;
+      svg {
+        position: absolute;
+        left: 9px;
+        top: -5px;
+        width: 30px;
+      }
+    }
+    &:nth-of-type(4) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+      .message__error {
+        top: 22px;
+      }
+    }
+    &:nth-of-type(5) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 20px;
+    }
+
+    label {
+      margin-bottom: 7px;
+    }
+
+    input,
+    textarea {
+      display: flex;
+      align-items: center;
+      height: 36px;
+      border: none;
+      outline: none;
+    }
+    textarea {
+      height: 70px;
+      resize: none;
+      overflow: auto;
+    }
+
+      input, textarea {
+      padding-left: 56px;
+      border: 1px solid transparent;
+        font-family: $fontText;
+        font-size: 15px;
+    }
+      input, textarea {
+      &.error {
+        border: 1px solid red;
+      }
+    }
+
+    input::placeholder, textarea::placeholder {
+      font-family: $fontText;
+      font-size: 15px;
+      color: $firstBg;
+    }
+  }
+  .resul-message {
+    display: none;
+    text-align: center;
+    @include main-text;
+    color: $firstBg;
+  }
+}
+
+.message__error, .textarea__message__error {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  color: red;
+  font-family: $fontText;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.textarea__message__error {
+  top: 74px;
+}
+
+#checkboxLabel {
+  &.error {
+    &::before {
+      border: 1px solid red;
+    }
+  }
+}
+
+#checkbox {
+  position: absolute;
+  opacity: 0;
+  left: -9999px;
+}
+
+#checkboxLabel {
+  @include main-text;
+  color: $firstBg;
+  position: relative;
+}
+
+#checkbox:checked + #checkboxLabel,
+#checkbox:not(:checked) + #checkboxLabel {
+  position: relative;
+  cursor: pointer;
+  margin-left: 39px;
+}
+
+#checkboxLabel::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -39px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid transparent;
+  background: rgb(255, 255, 255);
+
+}
+#checkboxLabel::after {
+  content: '✓';
+  position: absolute;
+  font-size: 28px;
+  color: $mainColor;
+  top: -14px;
+  left: -38px;
+  width: 20px;
+  height: auto;
+  opacity: 0;
+}
+
+#checkbox:checked + #checkboxLabel::after {
+  opacity: 1;
+}

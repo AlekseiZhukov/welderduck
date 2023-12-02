@@ -21,6 +21,7 @@
     "gulp-uglify-es": "^3.0.0",
     "jarallax": "^2.1.4",
     "jquery": "^3.7.0",
+    "jquery.maskedinput": "^1.4.1",
     "sass": "^1.65.1",
     "slick-carousel": "^1.8.1",
     "wow.js": "^1.1.2"

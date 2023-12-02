@@ -11,8 +11,8 @@
   font-family: 'SourceSansPro-Regular';
   src: url("../fonts/SourceSansPro-Regular.ttf");
 }
-
-$mainBg:  rgb(0, 0, 0);
+$candidate: rgb(78, 74, 74);
+$mainBg: rgb(56, 62, 66);
 $firstBg: rgb(110, 110, 116);
 $mainColor: rgb(255, 204, 15);
 $titleColor: rgb(252, 157, 39);
@@ -33,10 +33,9 @@ $fontText: 'SourceSansPro-Regular', san-serif;
 
 @mixin h1-title {
   font-family: $fontTitle;
-  font-size: 65px;
-  line-height: 1.3;
-  color: $titleColor;
-
+  font-size: 44px;
+  color: $mainColor;
+  font-style: normal;
 }
 @mixin sub-title {
   font-family: $fontSubTitle;
@@ -44,6 +43,7 @@ $fontText: 'SourceSansPro-Regular', san-serif;
   line-height: 1.3;
   color: $textColor;
 }
+
 @mixin h2-title {
   font-family: $fontTitle;
   font-size: 40px;
@@ -58,7 +58,25 @@ $fontText: 'SourceSansPro-Regular', san-serif;
   line-height: 1.2;
   font-style: normal;
   font-weight: normal;
+  color: white;
+}
+
+@mixin button {
+  background: transparent;
+  border: 1px solid $textColor;
+  font-size: 16px;
   color: $textColor;
+  cursor: pointer;
+  transition: .3s ease All;
+  width: 140px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    border: 1px solid $mainColor;
+    color: $mainColor;
+  }
 }
 
 
