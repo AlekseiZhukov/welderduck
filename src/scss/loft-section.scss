@@ -14,10 +14,16 @@
       .slick-prev {
         left: 0;
         z-index: 10;
+        &::before {
+          content: url("../images/arrow-prev.png");
+        }
       }
       .slick-next {
         right: 0;
         z-index: 10;
+        &::before {
+          content: url("../images/arrow-next.png");
+        }
       }
       .slide {
         position: relative;
