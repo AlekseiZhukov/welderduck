@@ -11,8 +11,8 @@
   font-family: 'SourceSansPro-Regular';
   src: url("../fonts/SourceSansPro-Regular.ttf");
 }
-$candidate: rgb(78, 74, 74);
-$mainBg: rgb(56, 62, 66);
+
+$mainBg: rgb(39, 41, 43);
 $firstBg: rgb(110, 110, 116);
 $mainColor: rgb(255, 204, 15);
 $titleColor: rgb(252, 157, 39);
@@ -54,7 +54,7 @@ $fontText: 'SourceSansPro-Regular', san-serif;
 
 @mixin main-text {
   font-family: $fontText;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   font-style: normal;
   font-weight: normal;

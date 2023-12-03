@@ -76,13 +76,14 @@
       position: relative;
       .logo-text {
         @include sub-title;
-        margin-left: 90px;
+        margin-left: 100px;
       }
       a {
         img {
           position: absolute;
           width: 100px;
           top: -10px;
+          left: -5px;
         }
       }
     }
@@ -119,11 +120,6 @@
     }
 
     .header__tel {
-      text-align: center;
-      @include main-text;
-      font-size: 19px;
-      color: $titleColor;
-      font-weight: 700;
       div {
 
         a {
@@ -131,6 +127,7 @@
           font-size: 28px;
           display: flex;
           align-items: center;
+          color: $mainColor;
           -webkit-transform: perspective(1px) translateZ(0);
           transform: perspective(1px) translateZ(0);
           &:hover {
@@ -224,7 +221,7 @@
   }
 }
 
-@media screen and (max-width: 673px) {
+@media screen and (max-width: 678px) {
 
   .header {
     .container {
@@ -232,6 +229,21 @@
       position: relative;
       .logo {
         margin-bottom: 30px;
+        max-width: unset;
+        width: 100%;
+        a {
+          width: 100%;
+          img {
+            left:0;
+          }
+          .logo-text {
+            width: 203px;
+            text-align: center;
+            margin-left: calc(50% - 101px);
+            //margin-left: 50%;
+          }
+        }
+
       }
     }
   }
@@ -243,13 +255,31 @@
     margin: 0;
   }
 }
+/*@media screen and (max-width: 427px) {
+  .header .container .logo a .logo-tex {
+    margin-left: calc(52% - 100px);
+  }
+}*/
+@media screen and (max-width: 420px) {
+  .header .container .logo a img {
+    width: 60px;
+    top: -3px;
 
-@media screen and (max-width: 427px) {
-  .header .container {
-    align-items: flex-start;
+  }
+  .header .container .logo a .logo-text {
+    font-size: 16px;
   }
 }
+@media screen and (max-width: 360px) {
 
+  .header .container .header__tel div a {
+    font-size: 24px;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
 @media screen and (max-width: 320px) {
   .header .container .logo a img {
     width: 60px;

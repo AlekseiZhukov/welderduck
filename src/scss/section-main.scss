@@ -4,18 +4,16 @@
 .main {
   position: relative;
   padding: 200px 0 80px 0;
-  background-image: url("../../dist/images/welderduck-bg.png");
-  background-position: center;
-  background-size: cover;
+  background-color: $mainBg;
 
-  .main-shading {
+  /*.main-shading {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: $shading;
-  }
+  }*/
 
   .container {
     display: flex;
@@ -179,7 +177,7 @@
 
 @media screen and (max-width: 420px) {
   .main{
-    padding: 150px 0 40px;
+    padding: 180px 0 40px;
   }
   .main .container .main__info .main__info-title {
     margin-bottom: 30px;

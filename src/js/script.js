@@ -59,7 +59,7 @@ $(document).ready( () => {
       } else {
           button.fadeOut();
       }
-      if ($(this).scrollTop() > 50 && window.screen.width <= 673) {
+      if ($(this).scrollTop() > 50 && window.screen.width <= 678) {
           $('#logo').hide('slow');
       } else {
           $('#logo').show('slow');
@@ -250,6 +250,21 @@ $(document).ready( () => {
             loader.hide()
         }
     })
+
+    $(".loft-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive:[
+            {
+                breakpoint: 426,
+                settings: {
+                    arrows: false,
+                    dots: false
+                }
+            }
+        ]
+
+    });
 
 
 });
