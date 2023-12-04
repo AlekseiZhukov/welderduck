@@ -37,7 +37,7 @@ $(document).ready( () => {
     })
 
     //----Плавный скрол для якорных линков----------
-    const navLink = $('nav ul li a, .logo a');
+    const navLink = $('nav ul li a, .logo a, .main__subdivision');
     navLink.on('click', function (env) {
         if (this.hash !== '') {
             env.preventDefault();
@@ -216,15 +216,15 @@ $(document).ready( () => {
         hasError = !(!hasErrorName && !hasErrorPhone && !hasErrorMessage && !hasErrorCheckbox);
 
         if(!hasError) {
-            const sentMessage = `Для Алексея:\n\n Имя: ${name.val()}\n\n Телефон: ${phone.val()}\n\n Сообщение: ${message.val()}`;
+            const sentMessage = `Имя: ${name.val()}\n\n Телефон: ${phone.val()}\n\n Сообщение: ${message.val()}`;
             const dataForSend = {
-                chat_id: "-521382689",
+                chat_id: "-4064576446",
                 parse_mode: "HTML",
                 text: sentMessage,
             }
             $.ajax({
                 method: "POST",
-                url: "https://api.telegram.org/bot1808311868:AAHC_Zz8Ju5ijZWPCVh5nAzd6Q2b6x-w-Ws/sendMessage",
+                url: "https://api.telegram.org/bot6925321360:AAHzHslfXmNbnHCHgLaZfZMSwSnITBdRXL8/sendMessage",
                 data: dataForSend
             })
                 .done( (msg) => {

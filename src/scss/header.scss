@@ -273,11 +273,14 @@
 @media screen and (max-width: 360px) {
 
   .header .container .header__tel div a {
-    font-size: 24px;
+    font-size: 20px;
     svg {
       width: 25px;
       height: 25px;
     }
+  }
+  .header .header__menu-btn {
+    top: 13px
   }
 }
 @media screen and (max-width: 320px) {
